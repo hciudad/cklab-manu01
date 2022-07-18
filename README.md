@@ -1,14 +1,14 @@
 <body>
-  <h1>The Brown Bear</h1>
+  <h1>CKlab's Expert-on-Call for Manufacturing</h1>
   <div id="introduction">
-    <h2>About Brown Bears</h2>
-    <p>The brown bear (<em>Ursus arctos</em>) is native to parts of northern Eurasia and North America. Its conservation status is currently <strong>Least Concern</strong>.<br /><br /> There are many subspecies within the brown bear species, including the Atlas bear and the Himalayan brown bear.</p>
-    <h3>Species</h3>
+    <h2>Who are we</h2>
+    <p>Founded in 2022 (<em>CKlab</em>) is providing remote consultation services to manufacturing companies globally. </p>
+    <h3>Industries we support</h3>
     <ul>
-      <li>Arctos</li>
-      <li>Collarus</li>
-      <li>Horribilis</li>
-      <li>Nelsoni (extinct)</li>
+      <li>Automobile</li>
+      <li>Food Processing</li>
+      <li>Chemical</li>
+      <li>Pharmaceutical</li>
     </ul>
     <h3>Features</h3>
     <p>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.</p>
