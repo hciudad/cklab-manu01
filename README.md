@@ -10,19 +10,16 @@
       <li>Chemical</li>
       <li>Pharmaceutical</li>
     </ul>
-    <h3>Features</h3>
-    <p>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.</p>
   </div>
-  <div id="habitat">
-    <h2>Habitat</h2>
-    <h3>Countries with Large Brown Bear Populations</h3>
+  <div id="ask_an_expert">
+    <h2>Ask an Expert</h2>
+    <h3>Click to Call</h3>
     <ol>
-      <li>Russia</li>
-      <li>United States</li>
-      <li>Canada</li>
+      <li>Automative</li>
+      <li>Food Processing</li>
+      <li>Chemical</li>
+      <li>Pharmaceutical</li>
     </ol>
-    <h3>Countries with Small Brown Bear Populations</h3>
-    <p>Some countries with smaller brown bear populations include Armenia, Belarus, Bulgaria, China, Finland, France, Greece, India, Japan, Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.</p>
   </div>
   <div id="media">
     <h2>Media</h2>
