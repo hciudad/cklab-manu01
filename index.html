@@ -47,7 +47,7 @@ Founded in 2022, CKlab provides the expertise your company desires in manufactor
     let init_test_session_btn = document.getElementById('btn-init-test-session');
     init_test_session_btn.onclick = () => {
       // Generates a random session UUID, customer name, and customer id, then opens a new Pexip video session.
-      let sessionWindow = window.open();
+      let sessionWindow = window.open(null, 'popup','width=600,height=600,scrollbars=no,resizable=no');
       let xhr = new XMLHttpRequest();
       xhr.addEventListener("load", (evt) => {
         let person = JSON.parse(evt.target.response).results[0];
