@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="-6226 -2854 216 144" width="216" height="144">
+  <defs>
+    <linearGradient x1="0" x2="1" id="Gradient" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="blue"/>
+      <stop offset="1" stop-color="white"/>
+    </linearGradient>
+    <linearGradient id="Obj_Gradient" xl:href="#Gradient" gradientTransform="translate(-6118 -2853) rotate(90) scale(142)"/>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.19.5\n2022-07-25 21:07:39 +0000</metadata>
+  <g id="Canvas_58" fill="none" stroke="none" stroke-dasharray="none" stroke-opacity="1" fill-opacity="1">
+    <title>Canvas 58</title>
+    <g id="Canvas_58_Layer_1">
+      <title>Layer 1</title>
+      <g id="Graphic_2">
+        <path d="M -6011 -2795.3125 C -6011 -2827.207 -6058.857 -2853 -6118 -2853 C -6177.143 -2853 -6225 -2827.207 -6225 -2795.3125 C -6225 -2768.1323 -6189.891 -2745.2518 -6142.764 -2739.2892 C -6146.631 -2729.027 -6153.004 -2716.9626 -6163.036 -2711 C -6143.706 -2711 -6124.583 -2725.1446 -6111.522 -2737.764 C -6055.409 -2739.566 -6011 -2764.666 -6011 -2795.3125 Z" fill="url(#Obj_Gradient)"/>
+        <path d="M -6011 -2795.3125 C -6011 -2827.207 -6058.857 -2853 -6118 -2853 C -6177.143 -2853 -6225 -2827.207 -6225 -2795.3125 C -6225 -2768.1323 -6189.891 -2745.2518 -6142.764 -2739.2892 C -6146.631 -2729.027 -6153.004 -2716.9626 -6163.036 -2711 C -6143.706 -2711 -6124.583 -2725.1446 -6111.522 -2737.764 C -6055.409 -2739.566 -6011 -2764.666 -6011 -2795.3125 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(-6220 -2835.3123)" fill="white">
+          <tspan font-family="Arial" font-size="34" fill="white" x="39.95166" y="31">Ask The</tspan>
+          <tspan font-family="Arial" font-size="34" fill="white" x="52.867676" y="70.112305">Expert</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
