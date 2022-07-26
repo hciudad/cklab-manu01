@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="534 240 152 102" width="152" height="102">
+  <defs>
+    <linearGradient x1="0" x2="1" id="Gradient" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#003776"/>
+      <stop offset="1" stop-color="white"/>
+    </linearGradient>
+    <linearGradient id="Obj_Gradient" xl:href="#Gradient" gradientTransform="translate(610 241) rotate(90) scale(100)"/>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.19.5\n2022-07-26 22:16:54 +0000</metadata>
+  <g id="On_Demand" fill="none" stroke="none" stroke-dasharray="none" stroke-opacity="1" fill-opacity="1">
+    <title>On Demand</title>
+    <g id="On_Demand_Layer_1">
+      <title>Layer 1</title>
+      <g id="Graphic_2">
+        <path d="M 685 281.625 C 685 259.164 651.4555 241 610 241 C 568.5445 241 535 259.164 535 281.625 C 535 300.766 559.609 316.879 592.642 321.078 C 589.9315 328.305 585.4645 336.801 578.4325 341 C 591.982 341 605.386 331.039 614.5405 322.152 C 653.872 320.883 685 303.207 685 281.625 Z" fill="url(#Obj_Gradient)"/>
+        <path d="M 685 281.625 C 685 259.164 651.4555 241 610 241 C 568.5445 241 535 259.164 535 281.625 C 535 300.766 559.609 316.879 592.642 321.078 C 589.9315 328.305 585.4645 336.801 578.4325 341 C 591.982 341 605.386 331.039 614.5405 322.152 C 653.872 320.883 685 303.207 685 281.625 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(540 253.21484)" fill="white">
+          <tspan font-family="Arial" font-size="24" fill="white" x="35.31836" y="22">Expert</tspan>
+          <tspan font-family="Arial" font-size="24" fill="white" x="5.300781" y="49.785156">On Demand</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
