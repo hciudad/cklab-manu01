@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="534 240 163 110" width="163" height="110">
+  <defs>
+    <linearGradient x1="0" x2="1" id="Gradient" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#003776"/>
+      <stop offset="1" stop-color="white"/>
+    </linearGradient>
+    <linearGradient id="Obj_Gradient" xl:href="#Gradient" gradientTransform="translate(615.5 241) rotate(90) scale(108)"/>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.19.5\n2022-07-26 22:29:38 +0000</metadata>
+  <g id="On_Demand" fill="none" stroke="none" stroke-dasharray="none" stroke-opacity="1" fill-opacity="1">
+    <title>On Demand</title>
+    <g id="On_Demand_Layer_1">
+      <title>Layer 1</title>
+      <g id="Graphic_2">
+        <path d="M 696 284.875 C 696 260.61712 659.9956 241 615.5 241 C 571.0044 241 535 260.61712 535 284.875 C 535 305.54728 561.41366 322.94932 596.8691 327.48424 C 593.9598 335.2894 589.1652 344.4651 581.61755 349 C 596.1607 349 610.54764 338.2421 620.3735 328.64416 C 662.5893 327.27364 696 308.18356 696 284.875 Z" fill="url(#Obj_Gradient)"/>
+        <path d="M 696 284.875 C 696 260.61712 659.9956 241 615.5 241 C 571.0044 241 535 260.61712 535 284.875 C 535 305.54728 561.41366 322.94932 596.8691 327.48424 C 593.9598 335.2894 589.1652 344.4651 581.61755 349 C 596.1607 349 610.54764 338.2421 620.3735 328.64416 C 662.5893 327.27364 696 308.18356 696 284.875 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(540 257.96392)" fill="white">
+          <tspan font-family="Arial" font-size="15" fill="white" x="40.911377" y="14">Click Here</tspan>
+          <tspan font-family="Arial" font-size="15" fill="white" x="66.74756" y="31.490723">for</tspan>
+          <tspan font-family="Arial" font-size="15" fill="white" x="11.303223" y="48.981445">Expert On Demand</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
