@@ -100,7 +100,7 @@ div2 {
     let init_test_session_btn = document.getElementById('btn-init-test-session');
     init_test_session_btn.onclick = () => {
       // Generates a random session UUID, customer name, and customer id, then opens a new Pexip video session.
-      let sessionWindow = window.open('https://github.com/ckeilberg57/landing/', 'popup','width=600,height=600,scrollbars=no,resizable=no');
+      let sessionWindow = window.open('https://ckeilberg57.github.io/landing/', 'popup','width=600,height=600,scrollbars=no,resizable=no');
       let xhr = new XMLHttpRequest();
       xhr.addEventListener("load", (evt) => {
         let person = JSON.parse(evt.target.response).results[0];
