@@ -74,8 +74,30 @@ div2 {
 <h2>
   <a href="#popupVideo" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Launch Video Form</a>
 <div data-role="popup" id="popupVideo" data-overlay-theme="b" data-theme="a" data-tolerance="15,15" class="ui-content">
-	<iframe src="https://ckeilberg57.github.io/manu-form" width="0" height="0" seamless=""></iframe>
+	<iframe src="https://ckeilberg57.github.io/manu-form" width="500" height="300" seamless=""></iframe>
 </div>
+$( document ).on( "pageinit", function() {
+    $( "#popupVideo iframe" )
+        .attr( "width", 0 )
+        .attr( "height", 0 );
+
+    $( "#popupVideo" ).on({
+        popupbeforeposition: function() {
+            var size = scale( 497, 298, 15, 1 ),
+                w = size.width,
+                h = size.height;
+
+            $( "#popupVideo iframe" )
+                .attr( "width", w )
+                .attr( "height", h );
+        },
+        popupafterclose: function() {
+            $( "#popupVideo iframe" )
+                .attr( "width", 0 )
+                .attr( "height", 0 );
+        }
+    });
+});
 </h2>
 <p>
 </p>
