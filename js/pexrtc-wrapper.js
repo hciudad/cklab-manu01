@@ -1,3 +1,5 @@
+const noop = () => {};
+
 export class PexRtcWrapper {
   constructor(videoElement, confNode, confName, displayName, pin, bandwidth = "1264") {
     this.videoElement = videoElement;
@@ -11,6 +13,8 @@ export class PexRtcWrapper {
 
     this.attachEvents();
 
+    this._poster = "";
+
     console.debug(`Video Element: ${this.videoElement}`);
     console.debug(`Bandwidth: ${this.bandwidth}`);
   }
@@ -21,7 +25,7 @@ export class PexRtcWrapper {
   }
 
   _setupHandler(videoUrl, pinStatus) {
-    console.debug(`PIN status: ${pinStatus}`);
+    console.debug({pinStatus});
     this.pexrtc.connect(this.pin);
   }
 
@@ -30,6 +34,7 @@ export class PexRtcWrapper {
   }
 
   _connectHandler(videoUrl) {
+    this._poster = this.videoElement.poster;
     this.videoElement.poster = "";
     if (typeof(MediaStream) !== "undefined" && videoUrl instanceof MediaStream) {
         this.videoElement.srcObject = videoUrl;
@@ -42,7 +47,8 @@ export class PexRtcWrapper {
   _disconnectHandler(reason) {
     console.debug({reason});
     window.removeEventListener('beforeunload', (...args) => this._hangupHandler(...args));
-    window.close();
+    this.disconnect();
+    this.videoElement.poster = this._poster;
   }
 
   attachEvents() {
@@ -59,13 +65,14 @@ export class PexRtcWrapper {
     return this;
   }
 
-  unmuteAudio() {
-    this.pexrtc.muteAudio(false);
-    return this;
-  }
+  onMuteAudioChange(isMuted) {}
 
-  muteAudio() {
-    this.pexrtc.muteAudio(true);
+  toggleMuteAudio(state = null) {
+    let args = [];
+    if (typeof(state) === "boolean") {
+        args.push(state);
+    }
+    this.onMuteAudioChange(this.pexrtc.muteAudio(...args));
     return this;
   }
 
