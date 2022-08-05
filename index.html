@@ -1,124 +1,181 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Team Manu Expert-On-Call</title>
-<style>
-body:after{
-      content:"";
-      position:fixed; /* stretch a fixed position to the whole screen */
-      top:0;
-      height:100vh; /* fix for mobile browser address bar appearing disappearing */
-      left:0;
-      right:0;
-      z-index:-1; /* needed to keep in the background */
+  <title>CKlab's Expert-On-Call</title>
+  <style>
+    body:after {
+      content: "";
+      position: fixed;
+      /* stretch a fixed position to the whole screen */
+      top: 0;
+      height: 100vh;
+      /* fix for mobile browser address bar appearing disappearing */
+      left: 0;
+      right: 0;
+      z-index: -1;
+      /* needed to keep in the background */
       background: url(Manufacturing.jpg) center center;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
-}
-h1 {
-  text-align: center;
-  font-size: 96x;
-  color: white;
-  }
-h2 {
-  text-align: center;
-  font-size: 250x;
-  color: #003776;
-  }
-#a {
-  text-align: center;
-  }
-div {
-  text-align: center;
-  }
-div1 {
-  position:fixed; left:175px; top:400px
-  }
-.submit {
-    background-color: #003776;
-    border-radius: 12px;
-    border: 0;
-    box-sizing: border-box;
-    color: #eee;
-    cursor: pointer;
-    font-size: 18px;
-    height: 50px;
-    text-align: center;
-    width: 100%;
-}
-div2 {
-  position:fixed; right:175px; top:400px
-  }
-.submit1 {
-    background-color: #003776;
-    border-radius: 12px;
-    border: 0;
-    box-sizing: border-box;
-    color: #eee;
-    cursor: pointer;
-    font-size: 18px;
-    height: 50px;
-    text-align: center;
-    width: 100%;
-</style>
-</head>
-<body>
-<h1>
-  <img src="CKlab-OnCallExpert.svg" alt="Ask A Expert">
-</h1>
-<h2>
-   <a target="popup" href="https://phx.pex-gcc.com/webapp/conference?callType=video&conference=pexiphealth2"
-   onclick="window.open('https://phx.pex-gcc.com/webapp/conference?callType=video&conference=pexiphealth2','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;">
-  <img src="ExpertOnDemand.svg" alt="Ask A Expert" />
-  </a>
-</div>
-</h2>
-<p>
-</p>
-<div>
- <a target="popup" href="https://phx.pex-gcc.com/webapp/conference?callType=video&conference=pexiphealth2"
-   onclick="window.open('https://phx.pex-gcc.com/webapp/conference?callType=video&conference=pexiphealth2','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;">
-  <img src="ExpertOnDemand.svg" alt="Ask A Expert" />
-  </a>
-  <p>
-  </p>
-  </div>
-  <div1>
-    <class="form">
-    <button id="btn-init-test-session" class="submit" type="submit">Connect with an Translater</button>
-    </div1>
-  <div2>
-    <class="form">
-    <button id="btn-init-test-session" class="submit" type="submit">Schedule and Appointment</button>
-    </div2>
-  <script type="text/javascript">
-    // NOTE: Set the following three values to match your self-host Pexip Infinity installation.
-    // External domain for Pexip Infinity Edge/Transcoding nodes.
-    let pexip_domain = "https://xmb-hc.pex-gcc.com";
-    // Used to identify the conference attendee for proper handling by Pexip Infinity local policy.
-    let pexip_conference_prefix = "hcp";
-    // Conference PIN. Must match the PIN number set by Pexip Infinity local policy for ad-hoc conference creation.
-    let pexip_pin = "2021";
-
-    let init_test_session_btn = document.getElementById('btn-init-test-session');
-    init_test_session_btn.onclick = () => {
-      // Generates a random session UUID, customer name, and customer id, then opens a new Pexip video session.
-      let sessionWindow = window.open('https://ckeilberg57.github.io/landing/', 'popup','width=600,height=600,scrollbars=no,resizable=no');
-      let xhr = new XMLHttpRequest();
-      xhr.addEventListener("load", (evt) => {
-        let person = JSON.parse(evt.target.response).results[0];
-        let sessionId = window.crypto.randomUUID().replaceAll("-", "");
-        let customerName = person.name.first[0] + person.name.last.replaceAll(" ", "-");
-        let customerId = `${person.name.last[0].toUpperCase()}${Math.floor(Math.random() * 100000000)}`;
-        let url = `${pexip_domain}/webapp/#/?conference=${pexip_conference_prefix}${sessionId}&name=${customerName}%20${customerId}&callType=video&role=guest&pin=${pexip_pin}`;
-        console.log(url);
-        sessionWindow.location = url;
-      });
-      xhr.open("GET", "https://randomuser.me/api/?nat=us,gb");
-      xhr.send();
     }
-  </script>
+
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+  <h1 class="text-center">
+    <img src="CKlab-OnCallExpert.svg" alt="Ask A Expert">
+  </h1>
+  <div class="container">
+    <div class="row">
+      <div class="col text-center my-auto">
+        <a id="btn-connect-translator" href="https://phx.pex-gcc.com/webapp/conference?callType=video&conference=pexiphealth2" class="btn btn-primary btn-lg" type="button"
+          title="Connect with a Translator"
+          onclick="window.open('https://phx.pex-gcc.com/webapp/conference?callType=video&conference=pexiphealth2','popup','width=600,height=600,scrollbars=no,resizable=no'); return false;">
+          Connect with a Translator
+
+        </a>
+      </div>
+      <div class="col text-center my-auto">
+        <button id="btn-ask-an-expert" data-prefix="hcp" class="btn btn-default btn-lg" type="button"
+          data-toggle="modal" data-target="#session-modal" title="Expert on Demand">
+          <img src="./ExpertOnDemand.svg" alt="Ask an Expert" />
+        </button>
+      </div>
+      <div class="col text-center my-auto">
+        <button id="btn-schedule-appointment" data-prefix="hcp" class="btn btn-primary btn-lg" type="button"
+          data-toggle="modal" data-target="#session-modal" title="Schedule an appointment">
+          Schedule an Appointment
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="session-modal" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="session-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="session-modal-label">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row" id="session-form-container">
+              <div class="col">
+                <form id="session-form">
+                  <div class="row form-group my-2">
+                    <label class="col-sm-2 col-form-label" for="session-id">Session ID</label>
+                    <div class="col-sm-10">
+                      <input type="text" readonly class="form-control-plaintext" name="session-id" id="session-id">
+                    </div>
+                  </div>
+                  <div class="row form-group my-2">
+                    <label class="col-sm-2 col-form-label" for="session-form-first-name">Name</label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" name="first-name" id="session-form-first-name"
+                        placeholder="First Name">
+                    </div>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control" name="last-name" placeholder="Last Name">
+                    </div>
+                  </div>
+                  <div class="row form-group my-2">
+                    <label class="col-sm-2 col-form-label" for="session-form-issue">Issue</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="issue" id="session-form-issue"
+                        placeholder="Short description of the issue">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="row" style="display: none;" id="video-container">
+              <video playsinline="playsinline" class="mediastream" muted autoplay="autoplay" /><br>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="init-session-btn">Launch</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="https://pexipdemo.com/static/webrtc/js/pexrtc.js"></script>
+
+
+<script type="module">
+  import { PexRtcWrapper } from "./js/pexrtc-wrapper.js";
+  // NOTE: Set the following three values to match your self-host Pexip Infinity installation.
+  // External domain for Pexip Infinity Edge/Transcoding nodes.
+  let pexip_domain = "xmb-hc.pex-gcc.com";
+  // Conference PIN. Must match the PIN number set by Pexip Infinity local policy for ad-hoc conference creation.
+  let pexip_pin = "2021";
+
+  $(() => {
+
+    let $session_modal = $("#session-modal"),
+      $session_form_container = $("#session-form-container"),
+      $session_form = $("#session-form"),
+      $init_session_btn = $("#init-session-btn"),
+      $video_container = $("#video-container"),
+      $video_el = $video_container.find("video"),
+      pexrtcWrapper;
+
+    $session_modal.on("show.bs.modal", (evt) => {
+      let $init_trigger = $(evt.relatedTarget),
+        title = $init_trigger.attr("title"),
+        session_prefix = $init_trigger.data("prefix"),
+        session_id = `${session_prefix}${window.crypto.randomUUID().replaceAll("-", "")}`;
+
+      $session_modal.find(".modal-title").text(title);
+      $session_form.find("input[name='session-id']").val(session_id);
+    }).on("hide.bs.modal", () => {
+      return confirm("Are you sure you want to close this session?");
+    }).on("hidden.bs.modal", (evt) => {
+      if (pexrtcWrapper) {
+        pexrtcWrapper.disconnect();
+        pexrtcWrapper = null;
+      }
+
+      $session_form_container.show();
+      $session_modal.find(".modal-footer").show();
+      $video_container.hide();
+      $session_form.get(0).reset();
+    });
+
+    $init_session_btn.on("click", (evt) => {
+      let confAlias = $session_form.find("input[name='session-id']").val(),
+        firstName = $session_form.find("input[name='first-name']").val(),
+        lastName = $session_form.find("input[name='last-name']").val(),
+        issue = $session_form.find("input[name='issue']").val(),
+        displayName = `${firstName}-${lastName}_${issue}`;
+
+      $session_form_container.hide();
+      $session_modal.find(".modal-footer").hide();
+      $video_container.show();
+
+      pexrtcWrapper = new PexRtcWrapper($video_el.get(0), pexip_domain, confAlias, displayName, pexip_pin);
+      pexrtcWrapper.makeCall().unmuteAudio();
+    });
+  })
+
+</script>
+
 </html>
