@@ -25,6 +25,7 @@
   </style>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdeliver.net/npm/flatpicker/disk/flatpicket.min.css" />
 </head>
 
 <body>
@@ -47,11 +48,7 @@
           <img src="./ExpertOnDemand.svg" alt="Ask an Expert" />
         </button>
       </div>
-      <div class="col text-center my-auto">
-        <button id="btn-schedule-appointment" data-prefix="hcp" class="btn btn-primary btn-lg" type="button"
-          data-toggle="modal" data-target="#session-modal" title="Schedule an appointment">
-          Schedule an Appointment
-        </button>
+     <input type="text" name="datetime" id="datetime" placeholder="Chose a Date and Time" />
       </div>
     </div>
   </div>
@@ -118,7 +115,13 @@
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <script src="https://pexipdemo.com/static/webrtc/js/pexrtc.js"></script>
-
+<script src="https://cdn.jsdeliver.net/npm/flatpicker"></script>script>
+<script>
+  flatpicker(:"#datetime", {
+    enableTime: true,
+    dateFormat: "y-m-d H:i",
+  }),
+</script>
 
 <script type="module">
   import { PexRtcWrapper } from "./js/pexrtc-wrapper.js";
