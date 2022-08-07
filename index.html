@@ -49,13 +49,6 @@
       <div>
      <link rel="stylesheet" href="https://cdn.jsdeliver.net/npm/flatpicker/disk/flatpicket.min.css" />
      <input type="text" name="datetime" id="datetime" placeholder="Chose a Date and Time" />
-      <script src="https://cdn.jsdeliver.net/npm/flatpicker"></script>script>
-<script>
-  flatpicker(:"#datetime", {
-    enableTime: true,
-    dateFormat: "y-m-d H:i",
-  }),
-</script>
       </div>
     </div>
   </div>
@@ -122,7 +115,13 @@
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <script src="https://pexipdemo.com/static/webrtc/js/pexrtc.js"></script>
-
+<script src="https://cdn.jsdeliver.net/npm/flatpicker"></script>
+  <script>
+    flatpicker(:"#datetime", {
+      enableTime: true,
+      dateFormat: "y-m-d H:i",
+   }),
+  </script>
 <script type="module">
   import { PexRtcWrapper } from "./js/pexrtc-wrapper.js";
   // NOTE: Set the following three values to match your self-host Pexip Infinity installation.
